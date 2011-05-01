@@ -11,13 +11,16 @@
 <div id="wrapper">
   <div id="header">
     <div id="logo">
-      <a href="#">Hack</a> <span class="subtext">Night</span>
+      <img src="images/hack.png"/>
+      <div id="text">
+        <a href="#">Hack</a> <span class="subtext">Night</span>
+      </div>
     </div>
     <ul id="nav">
-      <%= link_to("Hackers", projects_path) %>
-      <%= link_to("Projects", projects_path) %>
-      <%= link_to("Sponsors", sponsors_path) %>
-      <a href="/about"> About </a> 
+      <li><%= link_to("Hackers", projects_path) %></li>
+      <li><%= link_to("Projects", projects_path) %></li>
+      <li><%= link_to("Sponsors", sponsors_path) %></li>
+      <li><a href="/about"> About </a></li> 
     </ul>
   </div>
   <div id="content">

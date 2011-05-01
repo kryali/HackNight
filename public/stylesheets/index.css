@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
 @font-face {
   font-family: tcm;
   src: url("../fonts/tcm.ttf"); }
@@ -15,36 +20,86 @@ body {
   width: inherit;
   overflow: hidden;
   color: #aaaaaa;
-  padding: 1em; }
-
-#logo {
-  text-transform: uppercase;
-  width: 100px;
-  float: left; }
-  #logo a {
-    font-size: 6em;
-    letter-spacing: 5px; }
-  #logo span {
+  padding: 1.2em;
+  margin-top: -0.8em;
+  position: relative;
+  height: 100px; }
+  #header #logo {
+    text-transform: uppercase;
+    float: left; }
+    #header #logo a {
+      font-size: 6em;
+      letter-spacing: 5px; }
+    #header #logo span {
+      display: block;
+      font-size: 1em;
+      letter-spacing: 2.93em;
+      margin: -1.2em 0 0 0.4em; }
+    #header #logo img {
+      display: block;
+      float: left;
+      margin-top: 1em;
+      margin-right: .2em; }
+    #header #logo #text {
+      float: left; }
+  #header #nav {
+    position: absolute;
+    bottom: 1em;
+    right: 2em;
     display: block;
+    text-transform: uppercase;
     font-size: 1.2em;
-    letter-spacing: 2.3em;
-    margin: -1.2em 0 0 0.4em; }
-
-#nav {
-  display: block;
-  float: right; }
+    overflow: hidden;
+    /*
+        li, a{
+          display: block;
+          float: left;
+          height: 100px;
+          width: 100px;
+          border-left: solid 1px orange;
+          padding: 1em;
+        }
+    
+        a{
+          margin-top: 4em;
+        }
+        */ }
+    #header #nav li {
+      float: left;
+      height: 49px; }
+    #header #nav li a {
+      background: none repeat scroll 0 0 #FFFFFF;
+      border: 1px solid #FFFFFF;
+      border-radius: 5px 5px 5px 5px;
+      box-shadow: 0 2px 3px #333333;
+      color: #424242;
+      display: block;
+      float: left;
+      font-family: 'Calibri',sans-serif;
+      font-size: 1.05em;
+      margin: 0 1em;
+      padding: 5px .4em;
+      text-transform: uppercase; }
+    #header #nav li a:active {
+      box-shadow: 0 0 3px #333333 inset;
+      margin-top: 1px; }
 
 #content {
+  color: #aaaaaa;
   background: #171717; }
+
+#slideshow {
+  padding: 1em; }
 
 #sponsors {
   background: #1d1d1d; }
-
-h2 {
-  color: #eeeeee;
-  text-transform: uppercase;
-  text-align: center;
-  border-bottom: 1px #333333 solid; }
+  #sponsors h2 {
+    color: #eeeeee;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.5em 0em;
+    border-bottom: 1px #333333 solid;
+    border-top: 1px #333333 solid; }
 
 .accent {
   color: #ff8800; }
