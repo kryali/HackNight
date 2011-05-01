@@ -17,7 +17,11 @@
 </div>
 <div id="title-header">
   <h2>The <span class="accent">Hackers</span></h2>
+
   <div id="content">
+    <% @project.hackers.each do |hacker| %>
+        <%= hacker.name %>
+    <% end %>
     <%= collection_select(:hacker, :id, @hackers, :id, :name) %>
     <%= hidden_field(:project, :id) %>
     <a id="button" href="">Add Hacker</a>

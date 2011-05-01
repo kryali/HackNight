@@ -28,5 +28,8 @@ class ProjectsController < ApplicationController
   end
 
   def add_hacker
+    @project = Project.find(params[:project][:id])
+    @hacker = Hacker.find(params[:hacker][:id])
+    @project.hackers << @hacker
   end
 end
