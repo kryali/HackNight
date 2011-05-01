@@ -36,7 +36,7 @@ body {
   height: 70px;
   padding: 5px 20px 0 20px;
   background: #000000;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   width: 792px;
   font-size: 1.3em;
   line-height: 1.33;
@@ -92,7 +92,7 @@ body {
   #header #nav {
     position: absolute;
     bottom: 1em;
-    right: 2em;
+    right: 1em;
     display: block;
     text-transform: uppercase;
     font-size: 1.2em;
@@ -110,9 +110,11 @@ body {
       float: left;
       font-family: 'Calibri',sans-serif;
       font-size: 1.05em;
-      margin: 0 1em;
-      padding: 5px .4em;
-      text-transform: uppercase; }
+      margin: 0 1.4em;
+      padding: 5px .2em;
+      margin-top: 10px;
+      text-transform: uppercase;
+      font-size: 1em; }
     #header #nav li a:hover {
       box-shadow: 0 2px 3px #ff8800; }
     #header #nav li a:active {
@@ -136,6 +138,11 @@ body {
     border-bottom: 1px #333333 solid;
     border-top: 1px #333333 solid; }
 
+.fb_button {
+  position: absolute;
+  right: 4em;
+  top: 4em; }
+
 .slides_container {
   padding: 1.4em 2em 0em 3em;
   margin-bottom: 2em; }
@@ -146,10 +153,10 @@ body {
     box-shadow: 1px 1px 1px 1px #000000;
     -moz-box-shadow: 1px 1px 5px 2px #000000; }
   .slides_container h1 {
-    font-size: .9em;
+    font-size: 1.4em;
     text-transform: uppercase; }
   .slides_container p {
-    font-size: .7em;
+    font-size: .9em;
     color: #aaaaaa; }
 
 .accent {
