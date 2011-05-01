@@ -55,8 +55,12 @@ input:focus {
     float: right;
     width: 400px; }
 
-#button {
-  margin: 0 auto; }
+#button, select {
+  margin: 0 auto;
+  display: block; }
+
+select {
+  margin-bottom: 1em; }
 
 form {
   margin: 0 auto;
