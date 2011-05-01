@@ -1,9 +1,9 @@
 class CreateHacknights < ActiveRecord::Migration
   def self.up
     create_table :hacknights do |t|
-      t.name :string
+      t.string :name
       t.time :time
-      t.venue :string
+      t.string :venue
       t.timestamps
     end
   end
