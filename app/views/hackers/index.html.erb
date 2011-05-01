@@ -1,1 +1,13 @@
-<p> New Hacker? </p>
+<script>
+$(function(){
+  var hackNightId = "119736848105223";
+  FB.getLoginStatus(function(response) {
+    if(response.session) {
+      FB.api('/' + hackNightId + '/invited?access_token='+ token, function(event) {
+        console.log(event);
+      });
+    }
+  });
+});
+</script>
+<h2> I participated in Hack Night </h2>
