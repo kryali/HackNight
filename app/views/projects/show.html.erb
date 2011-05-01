@@ -22,9 +22,11 @@
     <% @project.hackers.each do |hacker| %>
         <%= hacker.name %>
     <% end %>
-    <%= collection_select(:hacker, :id, @hackers, :id, :name) %>
-    <%= hidden_field(:project, :id) %>
-    <a id="button" href="">Add Hacker</a>
+    <%= form_tag( add_hacker_path, :method => "post" ) do%>
+      <%= collection_select(:hacker, :id, @hackers, :id, :name) %>
+      <%= hidden_field(:project, :id) %>
+      <%= submit_tag("Add Hacker", :id=>"button") %>
+    <% end %>
   </div>
 </div>
 <div id="title-header">
