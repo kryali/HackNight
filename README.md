@@ -1,2 +1,2 @@
-# Hack Night
-This is the source code for the hacknight website, MIT liscenced
+# HACK NIGHT
+Source code for the hack night website
