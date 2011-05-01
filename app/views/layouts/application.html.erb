@@ -17,12 +17,19 @@
         <div id="fb-root"></div>
         <script src="http://connect.facebook.net/en_US/all.js"></script>
         <script>
-         FB.init({ 
+          FB.init({ 
             appId:'105681736187371', cookie:true, 
             status:true, xfbml:true 
-         });
+          });
+          FB.getLoginStatus(function(response) {
+            if(response.session) {
+                //Display users prof picture 
+                } else {
+                  $("#fb").css("display","block")
+              }
+        });
         </script>
-        <fb:login-button>Login with Facebook</fb:login-button>
+          <fb:login-button style="display:none" id="fb">Login with Facebook</fb:login-button>
       <div id="logo">
         <img src="images/hack.png"/>
         <div id="text">
