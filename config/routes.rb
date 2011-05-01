@@ -10,7 +10,7 @@ HackNight::Application.routes.draw do
 
   resources :hackers
 
-  root :to => "index#index"
+  root :to => "index#index", :as => "index"
   match 'about' => "index#about"
 
   match 'hackers' => "hackers#index"
