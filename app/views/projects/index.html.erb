@@ -10,6 +10,9 @@
         <%= link_to(project.name, project) %>
       </div>
       <img src="<%= project.image_url %>"/ height="100px">
+      <div id="project-desc">
+        <%= project.description %>
+      </div>
     </li>
   <% end %>
   </ul>

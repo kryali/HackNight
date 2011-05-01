@@ -26,7 +26,7 @@ $accent_color: #ff8800; // Used for text hover (the orange)
 
 body{
   font-family: tcm, sans-serif;
-  background: #111111;
+  background: #111111 url("../images/texture.png");
 }
 
 input[type="submit"], #button {
@@ -43,6 +43,25 @@ input[type="submit"], #button {
   text-align: center;
 }
 
+input:active {
+  box-shadow: 0px 0px 2px 1px $accent_color;
+}
+
+input:focus {
+  box-shadow: 0px 0px 2px 1px $accent_color;
+}
+
+#card{
+  margin: 0 auto;
+  #info{
+    float: left;
+  }
+  img{
+    float: left;
+    width: 500px;
+  }
+}
+
 #button{
   margin: 0 auto;
 }
@@ -53,6 +72,7 @@ form {
   padding: 0em 1em;
   margin-bottom: 2em;
   border: 1em solid #333333;
+  background: url("../images/texture.png");
   box-shadow: 1px 1px 1px 1px #000000;
   -moz-box-shadow: 1px 1px 5px 2px #000000;
   -webkit-box-shadow: 1px 1px 5px 2px #000000;
@@ -154,6 +174,7 @@ textarea {
   padding: 1.2em;
   margin-top: -.8em;
   position: relative;
+  background: url("../images/texture.png"); 
   height: 100px;
   #logo {
     text-transform: uppercase;
@@ -242,7 +263,7 @@ textarea {
     border-bottom: 1px #333333 solid;
     border-top: 1px #333333 solid;
   }
-  box-shadow: 1px 1px 3px 3px #000000;
+  box-shadow: 1px 1px 3px 3px #111111;
 }
 
 .fb_button{
