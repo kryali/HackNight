@@ -1,5 +1,78 @@
-<div id="slideshow">Slideshow goes here</div>
-
-<div id="sponsors">
+<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				generateNextPrev: false,
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+            pagination: false,
+            generatePagination: false,
+				animationStart: function(current){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:4
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						bottom:4
+					},200);
+				}
+            
+			});
+		});
+ </script>
+<div id="slides">
+  <div id="title-header">
+    <a class="prev" href="#"></a>
+    <a class="next" href="#"></a>
+    <h2>Featured <span class="accent">Hackers</span></h2>
+  </div>
+		<div class="slides_container">
+			<div>
+            <img src="images/slideshow_images/IMG_1506.JPG"/>
+            <div class="caption">
+              <h1>Team White Guys</h1>
+              <p>Developing a better hamburger. We're taking over the world</p>
+           </div>
+			</div>
+			<div>
+            <img src="images/slideshow_images/IMG_1507.JPG"/>
+            <div class="caption">
+              <h1>Red Bull Fueled</h1>
+              <p>We want more Red Bull!</p>
+            </div>
+			</div>
+			<div>
+            <img src="images/slideshow_images/IMG_1510.JPG"/>
+            <div class="caption">
+              <h1>Awesome Sponsers</h1>
+              <p>Thanks to our sponsors for help funding the next Myspace... er Facebook</p>
+           </div>
+			</div>
+			<div>
+            <img src="images/slideshow_images/IMG_1511.JPG"/>
+            <div class="caption">
+              <h1>Slacker Hacker</h1>
+              <p>A wild slacker hacker has been spotted!</p>
+            </div>
+			</div>
+		</div>
+</div>
+<div id="title-header">
   <h2>Sponsors <span class="accent">&</span> Friends</h2>
 </div>
+
