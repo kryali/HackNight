@@ -87,6 +87,7 @@ body{
         text-transform: uppercase;
     }
     li a:hover {
+        box-shadow: 0 2px 3px $accent_color;
     }
     li a:active {
         box-shadow: 0 0 3px #333333 inset;

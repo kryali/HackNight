@@ -80,6 +80,8 @@ body {
       margin: 0 1em;
       padding: 5px .4em;
       text-transform: uppercase; }
+    #header #nav li a:hover {
+      box-shadow: 0 2px 3px #ff8800; }
     #header #nav li a:active {
       box-shadow: 0 0 3px #333333 inset;
       margin-top: 1px; }
