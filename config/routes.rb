@@ -1,5 +1,9 @@
 HackNight::Application.routes.draw do
 
+  resources :hacknights
+
+  resources :badges
+
   resources :projects
 
   resources :sponsors
