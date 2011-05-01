@@ -8,27 +8,29 @@
 </head>
 <body>
 
-<div id="left_bg"></div>
-<div id="wrapper">
-  <div id="header">
-    <div id="logo">
-      <img src="images/hack.png"/>
-      <div id="text">
-        <a href="#">Hack</a> <span class="subtext">Night</span>
+<div id="wrapper2">
+  <div id="left_bg"></div>
+  <div id="right_bg"></div>
+  <div id="wrapper">
+    <div id="header">
+      <div id="logo">
+        <img src="images/hack.png"/>
+        <div id="text">
+          <a href="#">Hack</a> <span class="subtext">Night</span>
+        </div>
       </div>
+      <ul id="nav">
+        <li><%= link_to("Hackers", projects_path) %></li>
+        <li><%= link_to("Projects", projects_path) %></li>
+        <li><%= link_to("Sponsors", sponsors_path) %></li>
+        <li><a href="/about"> About </a></li> 
+      </ul>
     </div>
-    <ul id="nav">
-      <li><%= link_to("Hackers", projects_path) %></li>
-      <li><%= link_to("Projects", projects_path) %></li>
-      <li><%= link_to("Sponsors", sponsors_path) %></li>
-      <li><a href="/about"> About </a></li> 
-    </ul>
+    <div id="content">
+      <%= yield %>
+    </div>
+    <div id="footer"></div>
   </div>
-  <div id="content">
-    <%= yield %>
-  </div>
-  <div id="footer"></div>
 </div>
-<div id="left_bg"></div>
 </body>
 </html>
