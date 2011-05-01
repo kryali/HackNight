@@ -225,6 +225,7 @@ textarea {
   color: $text_color;
   background: #171717;
   overflow: hidden;
+  padding: 1em;
 }
 
 #slideshow{
@@ -241,6 +242,7 @@ textarea {
     border-bottom: 1px #333333 solid;
     border-top: 1px #333333 solid;
   }
+  box-shadow: 1px 1px 3px 3px #000000;
 }
 
 .fb_button{
