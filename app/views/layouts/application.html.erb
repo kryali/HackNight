@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+
 </head>
 <body>
 
@@ -13,6 +14,15 @@
   <div id="right_bg"></div>
   <div id="wrapper">
     <div id="header">
+        <div id="fb-root"></div>
+        <script src="http://connect.facebook.net/en_US/all.js"></script>
+        <script>
+         FB.init({ 
+            appId:'105681736187371', cookie:true, 
+            status:true, xfbml:true 
+         });
+        </script>
+        <fb:login-button>Login with Facebook</fb:login-button>
       <div id="logo">
         <img src="images/hack.png"/>
         <div id="text">
@@ -28,6 +38,7 @@
     </div>
     <div id="content">
       <%= yield %>
+
     </div>
     <div id="footer"></div>
   </div>
