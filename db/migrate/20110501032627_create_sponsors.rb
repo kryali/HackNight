@@ -1,10 +1,10 @@
 class CreateSponsors < ActiveRecord::Migration
   def self.up
     create_table :sponsors do |t|
-      t.name :string
-      t.description :text
-      t.company_url :string
-      t.logo_url :string
+      t.string :name
+      t.text :description
+      t.string :company_url
+      t.string :logo_url
       t.timestamps
     end
   end

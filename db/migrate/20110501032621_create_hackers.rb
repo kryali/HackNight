@@ -1,8 +1,8 @@
 class CreateHackers < ActiveRecord::Migration
   def self.up
     create_table :hackers do |t|
-      t.name :string
-      t.image_url :string
+      t.string :name
+      t.string :image_url
       t.timestamps
     end
   end

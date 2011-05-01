@@ -1,11 +1,11 @@
 class CreateProjects < ActiveRecord::Migration
   def self.up
     create_table :projects do |t|
-      t.name :string
-      t.description :text
-      t.project_url :string
-      t.image_url :string
-      t.votes :integer
+      t.string :name
+      t.text :description
+      t.string :project_url
+      t.string :image_url
+      t.integer :votes
       t.timestamps
     end
   end
