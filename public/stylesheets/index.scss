@@ -53,12 +53,16 @@ input:focus {
 
 #card{
   margin: 0 auto;
+  background: #333333;
+  overflow: hidden;
+  width: 700px;
   #info{
     float: left;
+    padding: 1em;
   }
   img{
-    float: left;
-    width: 500px;
+    float: right;
+    width: 400px;
   }
 }
 
