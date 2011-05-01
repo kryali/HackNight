@@ -2,13 +2,16 @@
   <h2>Create a <span class="accent">Project</span></h2>
 </div>
 <%= form_for :project, @project, :url => { :action => "create"} do |f| %>
-  <%= label_tag(:name, "Project Name") %>
-  <%= f.text_field :name %>
-  <%= label_tag(:description, "Description") %>
-  <%= f.text_area :description %>
-  <%= label_tag(:image_url, "Image URL (screenshot)") %>
-  <%= f.text_field :image_url %>
-  <%= label_tag(:project_url, "Project URL (optional)") %>
-  <%= f.text_field :project_url %>
-  <%= submit_tag "Create Project" %>
+  <% if flash[:errors] %>
+    <ul id="errors">
+    <% flash[:errors].each do |error|%>
+      <li><%= error.to_s.humanize %><br /></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <%= f.text_field :name, :placeholder => "Project Name" %>
+  <%= f.text_field :image_url, :placeholder => "Image URL (imgur.com)" %>
+  <%= f.text_field :project_url, :placeholder => "Project URL (optional)" %>
+  <%= f.text_area :description, :placeholder => "Description" %>
+  <%= submit_tag "Save Project" %>
 <% end %>
