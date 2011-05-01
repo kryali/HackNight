@@ -7,6 +7,7 @@ HackNight::Application.routes.draw do
   resources :hackers
 
   root :to => "index#index"
+  match 'about' => "index#about"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

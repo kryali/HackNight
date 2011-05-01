@@ -1,3 +1,77 @@
+$link_color: #dedede;
+$text_color: #aaaaaa;
+$background_color: #1d1d1d;
+$content_color: #171717;
+$accent_color: #ff8800; // Used for text hover (the orange)
+
+@font-face{
+  font-family: tcm;
+  src: url('../fonts/tcm.ttf');
+}
+
 body{
-  background: red;
+  font-family: tcm, sans-serif;
+  background: #111111;
+}
+
+#wrapper{
+  width: 920px;
+  background: $background_color;
+  margin: 0 auto;
+}
+
+#header{
+  width: inherit;
+  overflow: hidden;
+  color: $text_color;
+  padding: 1em;
+}
+
+#logo {
+  text-transform: uppercase;
+  width: 100px;
+  float: left;
+  a {
+    font-size: 6em;
+    letter-spacing: 5px;
+  }
+  span {
+    display: block;
+    font-size: 1.2em;
+    letter-spacing: 2.3em;
+    margin: -1.2em 0 0 .4em;
+  }
+}
+
+#nav{
+  display: block;
+  float: right;
+}
+
+#content{
+  background: #171717;
+}
+
+#sponsors{
+  background: $background_color;
+}
+
+h2 {
+  color: #eeeeee;
+  text-transform: uppercase;
+  text-align: center;
+  border-bottom: 1px #333333 solid;
+}
+
+.accent {
+  color: $accent_color;
+}
+
+
+a{
+  color: $link_color;
+  text-decoration: none;
+  &:hover{
+    color: $accent_color;
+  }
 }

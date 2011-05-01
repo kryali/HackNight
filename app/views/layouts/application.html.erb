@@ -7,10 +7,23 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
-<ul id="nav">
-</ul>
 
-<%= yield %>
-
+<div id="wrapper">
+  <div id="header">
+    <div id="logo">
+      <a href="#">Hack</a> <span class="subtext">Night</span>
+    </div>
+    <ul id="nav">
+      <%= link_to("Hackers", projects_path) %>
+      <%= link_to("Projects", projects_path) %>
+      <%= link_to("Sponsors", sponsors_path) %>
+      <a href="/about"> About </a> 
+    </ul>
+  </div>
+  <div id="content">
+    <%= yield %>
+  </div>
+  <div id="footer"></div>
+</div>
 </body>
 </html>
