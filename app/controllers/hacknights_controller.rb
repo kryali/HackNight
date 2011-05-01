@@ -1,0 +1,2 @@
+class HacknightsController < ApplicationController
+end
