@@ -10,14 +10,112 @@ $accent_color: #ff8800; // Used for text hover (the orange)
   list-style-type: none;
 }
 
+.slides_control{//webkit fuck
+  height: 450px;
+}
+
 @font-face{
   font-family: tcm;
   src: url('../fonts/tcm.ttf');
 }
 
+@font-face{
+  font-family: tcmbold;
+  src: url('../fonts/tcmbold.ttf');
+}
+
 body{
   font-family: tcm, sans-serif;
-  background: #111111;
+  background: #111111 url("../images/texture.png");
+}
+
+input[type="submit"], #button {
+  display: block;
+  width: 260px;
+  color: #212121;
+  box-shadow: 2px 2px 2px 1px #000000;
+  border:3px solid $accent_color;
+  background: #ffa135;
+  text-transform: uppercase;
+  font-family: tcmbold, tcm, sans-serif;
+  font-size: 1.4em;
+  cursor: hand;
+  text-align: center;
+}
+
+input:active {
+  box-shadow: 0px 0px 2px 1px $accent_color;
+}
+
+input:focus {
+  box-shadow: 0px 0px 2px 1px $accent_color;
+}
+
+#card{
+  margin: 0 auto;
+  background: #333333;
+  overflow: hidden;
+  width: 800px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 2px 2px #111111;
+  #info{
+    float: left;
+    padding: 1em;
+    border: 1px solid #333333;
+  }
+  img{
+    border: 1px solid #111111;
+    float: right;
+    width: 400px;
+  }
+}
+
+#button{
+  margin: 0 auto;
+}
+
+form {
+  margin: 0 auto;
+  width: 300px;
+  padding: 0em 1em;
+  margin-bottom: 2em;
+  border: 1em solid #333333;
+  background: url("../images/texture.png");
+  box-shadow: 1px 1px 1px 1px #000000;
+  -moz-box-shadow: 1px 1px 5px 2px #000000;
+  -webkit-box-shadow: 1px 1px 5px 2px #000000;
+}
+
+#errors{
+  padding: 1em 0em 0em 0em;
+  width: 250px;
+  margin: 0 auto;
+  li {
+    background: #ecabab;
+    border: 1px solid #e04141;
+    color: #333333;
+    padding: 0px 5px;
+  }
+}
+
+textarea, input {
+  width: 250px;
+  margin: 1.8em auto;
+  display: block;
+  font-size: .8em;
+  background: #eeeeee;
+  color: #666;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+
+textarea {
+  height: 100px;
+  font-family: Lucida Grande, Arial, sans-serif;
+  font-size: .8em;
 }
 
 #left_bg{
@@ -84,6 +182,7 @@ body{
   padding: 1.2em;
   margin-top: -.8em;
   position: relative;
+  background: url("../images/texture.png"); 
   height: 100px;
   #logo {
     text-transform: uppercase;
@@ -154,6 +253,8 @@ body{
 #content{
   color: $text_color;
   background: #171717;
+  overflow: hidden;
+  padding: 1em;
 }
 
 #slideshow{
@@ -170,6 +271,7 @@ body{
     border-bottom: 1px #333333 solid;
     border-top: 1px #333333 solid;
   }
+  box-shadow: 1px 1px 3px 3px #111111;
 }
 
 .fb_button{
@@ -187,6 +289,7 @@ body{
     border-right: 1em solid #333333;
     box-shadow: 1px 1px 1px 1px #000000;
     -moz-box-shadow: 1px 1px 5px 2px #000000;
+    -webkit-box-shadow: 1px 1px 5px 2px #000000;
   }
   h1{
     font-size: 1.4em;

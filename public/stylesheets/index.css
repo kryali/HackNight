@@ -3,13 +3,93 @@
   padding: 0;
   list-style-type: none; }
 
+.slides_control {
+  height: 450px; }
+
 @font-face {
   font-family: tcm;
   src: url("../fonts/tcm.ttf"); }
 
+@font-face {
+  font-family: tcmbold;
+  src: url("../fonts/tcmbold.ttf"); }
+
 body {
   font-family: tcm, sans-serif;
-  background: #111111; }
+  background: #111111 url("../images/texture.png"); }
+
+input[type="submit"], #button {
+  display: block;
+  width: 260px;
+  color: #212121;
+  box-shadow: 2px 2px 2px 1px #000000;
+  border: 3px solid #ff8800;
+  background: #ffa135;
+  text-transform: uppercase;
+  font-family: tcmbold, tcm, sans-serif;
+  font-size: 1.4em;
+  cursor: hand;
+  text-align: center; }
+
+input:active {
+  box-shadow: 0px 0px 2px 1px #ff8800; }
+
+input:focus {
+  box-shadow: 0px 0px 2px 1px #ff8800; }
+
+#card {
+  margin: 0 auto;
+  background: #333333;
+  overflow: hidden;
+  width: 700px; }
+  #card #info {
+    float: left;
+    padding: 1em; }
+  #card img {
+    float: right;
+    width: 400px; }
+
+#button {
+  margin: 0 auto; }
+
+form {
+  margin: 0 auto;
+  width: 300px;
+  padding: 0em 1em;
+  margin-bottom: 2em;
+  border: 1em solid #333333;
+  background: url("../images/texture.png");
+  box-shadow: 1px 1px 1px 1px #000000;
+  -moz-box-shadow: 1px 1px 5px 2px #000000;
+  -webkit-box-shadow: 1px 1px 5px 2px #000000; }
+
+#errors {
+  padding: 1em 0em 0em 0em;
+  width: 250px;
+  margin: 0 auto; }
+  #errors li {
+    background: #ecabab;
+    border: 1px solid #e04141;
+    color: #333333;
+    padding: 0px 5px; }
+
+textarea, input {
+  width: 250px;
+  margin: 1.8em auto;
+  display: block;
+  font-size: .8em;
+  background: #eeeeee;
+  color: #666;
+  border: none;
+  padding: 5px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px; }
+
+textarea {
+  height: 100px;
+  font-family: Lucida Grande, Arial, sans-serif;
+  font-size: .8em; }
 
 #left_bg {
   width: 55px;
@@ -70,6 +150,7 @@ body {
   padding: 1.2em;
   margin-top: -0.8em;
   position: relative;
+  background: url("../images/texture.png");
   height: 100px; }
   #header #logo {
     text-transform: uppercase;
@@ -123,13 +204,16 @@ body {
 
 #content {
   color: #aaaaaa;
-  background: #171717; }
+  background: #171717;
+  overflow: hidden;
+  padding: 1em; }
 
 #slideshow {
   padding: 1em; }
 
 #title-header {
-  background: #222222; }
+  background: #222222;
+  box-shadow: 1px 1px 3px 3px #111111; }
   #title-header h2 {
     color: #eeeeee;
     text-transform: uppercase;
@@ -151,7 +235,8 @@ body {
     border-left: 1em solid #333333;
     border-right: 1em solid #333333;
     box-shadow: 1px 1px 1px 1px #000000;
-    -moz-box-shadow: 1px 1px 5px 2px #000000; }
+    -moz-box-shadow: 1px 1px 5px 2px #000000;
+    -webkit-box-shadow: 1px 1px 5px 2px #000000; }
   .slides_container h1 {
     font-size: 1.4em;
     text-transform: uppercase; }
