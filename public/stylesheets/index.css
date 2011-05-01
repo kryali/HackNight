@@ -156,6 +156,14 @@ textarea {
   position: relative;
   background: url("../images/texture.png");
   height: 100px; }
+  #header #fb-profile {
+    line-height: 50px;
+    float: right; }
+    #header #fb-profile img {
+      float: right;
+      vertical-align: middle; }
+    #header #fb-profile h2 {
+      float: left; }
   #header #logo {
     text-transform: uppercase;
     float: left; }

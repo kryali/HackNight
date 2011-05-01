@@ -3,7 +3,8 @@
 <head>
   <title>HackNight</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= javascript_include_tag "jquery.min.js", "fb.js", "slides.min.jquery.js" %>
   <%= csrf_meta_tag %>
 
 </head>
@@ -16,20 +17,12 @@
     <div id="header">
         <div id="fb-root"></div>
         <script src="http://connect.facebook.net/en_US/all.js"></script>
-        <script>
-          FB.init({ 
-            appId:'105681736187371', cookie:true, 
-            status:true, xfbml:true 
-          });
-          FB.getLoginStatus(function(response) {
-            if(response.session) {
-                //Display users prof picture 
-                } else {
-                  $("#fb").css("display","block")
-              }
-        });
-        </script>
-          <fb:login-button style="display:none" id="fb">Login with Facebook</fb:login-button>
+        
+        <div id ="fb-profile">
+          <h2></h2>
+          <img />
+        </div>
+        <fb:login-button style="display:none" id="fb-login">Login with Facebook</fb:login-button>
       <div id="logo">
         <%= image_tag('hack.png') %>
         <div id="text">

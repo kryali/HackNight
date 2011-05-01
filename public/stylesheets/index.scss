@@ -184,6 +184,18 @@ textarea {
   position: relative;
   background: url("../images/texture.png"); 
   height: 100px;
+  #fb-profile {
+    line-height:50px;
+    float:right;
+    img {
+      float:right;
+      vertical-align:middle; 
+    }
+    h2 {
+      float:left;
+    }
+  }
+
   #logo {
     text-transform: uppercase;
     float: left;
