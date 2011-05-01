@@ -1,4 +1,14 @@
 <div id="title-header">
   <h2>The <span class="accent">Projects<span></h2>
 </div>
-<%= link_to("Create a Project", new_project_path, :id=>"button") %>
+<div id="projects">
+  <%= link_to("Create a Project", new_project_path, :id=>"button") %>
+  <ul id="projects-list">
+  <% @projects.each do |project| %>
+    <li>
+      <div id="project-name"><%= project.name %></div>
+      <img src="<%= project.image_url %>"/ height="100px">
+    </li>
+  <% end %>
+  </ul>
+</div>

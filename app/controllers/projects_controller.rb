@@ -5,6 +5,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
+    @projects = Project.all
   end
 
   def create
@@ -15,5 +16,9 @@ class ProjectsController < ApplicationController
         flash[:errors] = @project.errors.full_messages
         render :action => "new"
     end
+  end
+
+  def edit
+    @project = Project.find(params[:id])
   end
 end

@@ -29,7 +29,7 @@ body{
   background: #111111;
 }
 
-input[type="submit"] {
+input[type="submit"], #button {
   display: block;
   width: 260px;
   color: #212121;
@@ -40,6 +40,11 @@ input[type="submit"] {
   font-family: tcmbold, tcm, sans-serif;
   font-size: 1.4em;
   cursor: hand;
+  text-align: center;
+}
+
+#button{
+  margin: 0 auto;
 }
 
 form {
