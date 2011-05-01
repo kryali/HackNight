@@ -10,6 +10,7 @@
         <span class="accent">URL:</span> <%= @project.project_url %>
       <% end %>
       <li><span class="accent">Description: </span><%= @project.description %></li>
+      <li><%= link_to("Edit", edit_project_path(@project.id)) %></li>
     </ul>
     <img src="<%= @project.image_url %>" />
   </div>
