@@ -1,0 +1,14 @@
+<%= form_for :sponsor, @sponsor, :url => { :action => "create"} do |f| %>
+  <% if flash[:errors] %>
+    <ul id="errors">
+    <% flash[:errors].each do |error|%>
+      <li><%= error.to_s.humanize %><br /></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <%= f.text_field :name, :placeholder => "Sponsor Name" %>
+  <%= f.text_field :logo_url, :placeholder => "Logo Image URL" %>
+  <%= f.text_field :company_url, :placeholder => "Sponsor URL" %>
+  <%= f.text_area :description, :placeholder => "Sponsor Description" %>
+  <%= submit_tag "Save Sponsor" %>
+<% end %>

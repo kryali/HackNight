@@ -4,4 +4,6 @@ log/*.log
 tmp/**/*
 *.scssc
 *.swp
+*~
 .DS_Store
+*~

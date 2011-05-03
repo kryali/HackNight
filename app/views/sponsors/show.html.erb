@@ -1,0 +1,25 @@
+<div id="title-header">
+  <h2>Thank you <span class="accent"><%= @sponsor.name %></span></h2>
+</div>
+
+<div id="content">
+  <div id="card">
+    <ul id="info">
+      <li><span class="accent">Name:</span> <%= @sponsor.name %></li>
+      <% if @sponsor.company_url? %>
+        <span class="accent">URL:</span> <%= @sponsor.company_url %>
+      <% end %>
+      <li><span class="accent">Description: </span><%= @sponsor.description %></li>
+      <li><%= link_to("Edit", edit_sponsor_path(@sponsor.id)) %></li>
+    </ul>
+    <img src="<%= @sponsor.logo_url %>" />
+  </div>
+</div>
+<div id="title-header">
+  <h2>Sponsored  <span class="accent">Hack Nights</span></h2>
+  <div id="content">
+    <% @hacknights.each do |hacknight| %>
+        <%= hacknight.venue %>
+    <% end %>
+  </div>
+</div>
