@@ -28,7 +28,7 @@
 		return this.each(function(){
 			// wrap slides in control container, make sure slides are block level
 			$('.' + option.container, $(this)).children().wrapAll('<div class="slides_control"/>');
-			
+		
 			var elem = $(this),
 				control = $('.slides_control',elem),
 				total = control.children().size(),
@@ -38,6 +38,8 @@
 				effect = option.effect.indexOf(',') < 0 ? option.effect : option.effect.replace(' ', '').split(',')[0],
 				paginationEffect = option.effect.indexOf(',') < 0 ? effect : option.effect.replace(' ', '').split(',')[1],
 				next = 0, prev = 0, number = 0, current = 0, loaded, active, clicked, position, direction, imageParent, pauseTimeout, playInterval;
+
+            console.log(height);
 			
 			// animate slides
 			function animate(direction, effect, clicked) {
