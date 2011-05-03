@@ -1,3 +1,8 @@
 <div id="title-header">
   <h2>The <span class="accent">Sponsors</span></h2>
 </div>
+<div id="content">
+  <% @sponsors.each do |sponsor| %>
+    <%= image_tag(sponsor.logo_url, :height => "100", :class => "sponsor_logo") %>
+  <%end%>
+</div>

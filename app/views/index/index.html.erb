@@ -66,5 +66,9 @@
 </div>
 <div id="title-header">
   <h2>Sponsors <span class="accent">&</span> Friends</h2>
+
+  <% @sponsors.each do |sponsor| %>
+    <%= image_tag(sponsor.logo_url, :height => "100", :class => "sponsor_logo") %>
+  <%end%>
 </div>
 

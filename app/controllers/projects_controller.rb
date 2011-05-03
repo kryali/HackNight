@@ -29,9 +29,15 @@ class ProjectsController < ApplicationController
 
   def add_hacker
     @project = Project.find(params[:project][:id])
-    @hacker = Hacker.find(params[:hacker][:id])
-    @project.hackers << @hacker
-    @project.save
-    redirect_to(@project, :notice => "Hacker was added!")
+    if params[:hacker]
+      @hacker = Hacker.find(params[:hacker][:id]) 
+      @project.hackers << @hacker
+    end
+
+    if @project.save
+      redirect_to(@project, :notice => "Hacker was added!")
+    else
+      flash[:errors] = @project.errors.full_messages
+    end
   end
 end

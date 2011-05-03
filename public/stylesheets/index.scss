@@ -321,12 +321,9 @@ textarea {
   }
 }
 
-
-
 .accent {
   color: $accent_color;
 }
-
 
 a{
   color: $link_color;
@@ -334,4 +331,11 @@ a{
   &:hover{
     color: $accent_color;
   }
+}
+
+
+.sponsor_logo{
+  margin: 0 auto;
+  display:block;
+  padding: 1em;
 }

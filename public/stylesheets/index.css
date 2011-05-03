@@ -247,7 +247,8 @@ textarea {
 
 .slides_container {
   padding: 1.4em 2em 0em 3em;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  height: 450px; }
   .slides_container img {
     border-top: 1em solid #333333;
     border-left: 1em solid #333333;
@@ -270,3 +271,8 @@ a {
   text-decoration: none; }
   a:hover {
     color: #ff8800; }
+
+.sponsor_logo {
+  margin: 0 auto;
+  display: block;
+  padding: 1em; }
