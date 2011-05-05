@@ -14,7 +14,7 @@ class SponsorsController < ApplicationController
       redirect_to(@sponsor) 
       #redirect_to :action => 'show', :id => @sponsor.id
     else
-      flash[:errors] = @project.errors.full_messages
+      flash[:errors] = @sponsor.errors.full_messages
       render :action => "new"
     end
   end
@@ -26,6 +26,15 @@ class SponsorsController < ApplicationController
   def show
     @sponsor = Sponsor.find(params[:id])
     @hacknights = Hacknight.all
+  end
+
+  def update
+    @sponsor = Sponsor.find(params[:id])
+    if(@sponsor.update_attributes(params[:sponsor])
+      redirect_to(@sponsor)
+    else
+      redirect_to(edit_sponsor_path(@sponsor))
+    end
   end
 
 end

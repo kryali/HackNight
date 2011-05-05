@@ -1,4 +1,4 @@
-<%= form_for :sponsor, @sponsor, :url => { :action => "create"} do |f| %>
+<%= form_for(@sponsor) do |f| %>
   <% if flash[:errors] %>
     <ul id="errors">
     <% flash[:errors].each do |error|%>
