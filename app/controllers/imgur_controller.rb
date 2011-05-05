@@ -1,0 +1,2 @@
+class ImgurController < ApplicationController
+end

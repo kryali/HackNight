@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110501231644) do
+ActiveRecord::Schema.define(:version => 20110505042421) do
 
   create_table "badges", :force => true do |t|
     t.datetime "created_at"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20110501231644) do
     t.integer  "votes"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_hash"
   end
 
   create_table "skills", :force => true do |t|
@@ -56,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20110501231644) do
     t.string   "logo_url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "image_hash"
   end
 
 end
