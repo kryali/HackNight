@@ -16,6 +16,7 @@ HackNight::Application.routes.draw do
   match 'hackers' => "hackers#index"
   match 'projects/add_hacker' => "projects#add_hacker", :as => "add_hacker"
   match 'imgur' => "imgur#upload", :as => "imgur_api"
+  match 'fb_add_hacker' => "hacker#add"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

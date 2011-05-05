@@ -15,13 +15,12 @@
   <div id="wrapper">
     <div id="header">
         <div id="fb-root"></div>
-        <script src="http://connect.facebook.net/en_US/all.js"></script>
         
         <div id ="fb-profile">
           <h2></h2>
           <img />
         </div>
-        <fb:login-button style="display:none" id="fb-login">Login with Facebook</fb:login-button>
+        <fb:login-button style="display:none" id="fb-login" perms="email, user_events">Login with Facebook</fb:login-button>
       <div id="logo">
         <%= image_tag('hack.png') %>
         <div id="text">
@@ -39,5 +38,6 @@
     <div id="footer"></div>
   </div>
 </div>
+  <script src="http://connect.facebook.net/en_US/all.js"></script>
 </body>
 </html>
