@@ -87,12 +87,17 @@ function fb_login(){
   });
 };
  $(document).ready(function() {
-  $("#fb-login").click( function(){
-    fb_login();
-  });
 
   FB.init({
     appId:'105681736187371', cookie:true, 
     status:true, xfbml:true 
   });
+
+  $("#fb-login").css("display", "block")
+
+
+  $("#fb-login").click( function(){
+    fb_login();
+  });
+
 });
