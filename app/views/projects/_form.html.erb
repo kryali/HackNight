@@ -1,4 +1,8 @@
-<%= form_for (@project) do |f| %>
+<% content_for :head do %>
+  <%= javascript_include_tag "jquery.form" %>
+<% end %>
+
+<%= form_for @project, :html => {:id => "submit-form"} do |f| %>
   <% if flash[:errors] %>
     <ul id="errors">
     <% flash[:errors].each do |error|%>
@@ -8,8 +12,8 @@
   <% end %>
   <%= f.text_field :name, :placeholder => "Project Name" %>
   <%= f.text_field :image_url, :placeholder => "Image URL (use imgur.com for a host)" %>
-  <%= f.file_field :upload, :value =>"Browse for image" %>
   <%= f.text_field :project_url, :placeholder => "Project URL (optional)" %>
   <%= f.text_area :description, :placeholder => "Description" %>
   <%= submit_tag "Save Project" %>
 <% end %>
+<%= javascript_include_tag "image_upload" %>

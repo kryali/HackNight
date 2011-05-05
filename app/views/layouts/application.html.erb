@@ -5,7 +5,7 @@
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag "jquery.min.js", "fb.js", "slides.min.jquery.js" %>
   <%= csrf_meta_tag %>
-
+  <%= yield :head %>
 </head>
 <body>
 
