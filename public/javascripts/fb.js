@@ -18,7 +18,8 @@ $(function(){
             name: user.name,
             email: user.email,
             access_token: response.session.access_token,
-            image_url: "http://graph.facebook.com/" + user.id + "/picture"
+            image_url: "http://graph.facebook.com/" + user.id + "/picture",
+            fb_id: user.id
           };
           $.post("/fb_add_hacker", hacker, function(data){
             //alert("Sent the add request bro, STATUS: " + data);
@@ -42,6 +43,7 @@ $(function(){
       FB.api('/me', function(user) {
        if(user != null) {
           //If they are already logged in, show dat face!
+          console.log(user);
           $("#fb-profile > img").attr("src","http://graph.facebook.com/" + user.id + "/picture");
 //          post_to_url('/text',{'name': user.name, 'image_url': "http://graph.facebook.com/" + user.id + "/picture"},"post")
         }

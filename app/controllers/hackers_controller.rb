@@ -15,7 +15,8 @@ class HackersController < ApplicationController
         name: params[:name],
         email: params[:email],
         access_token: params[:access_token],
-        image_url: params[:image_url]
+        image_url: params[:image_url],
+        fb_id: params[:fb_id]
       })
       if @hacker.save
         render :text =>  "Added Hacker: " + @hacker.id.to_s
