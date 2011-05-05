@@ -20,7 +20,7 @@
 
   <div id="content">
     <% @project.hackers.each do |hacker| %>
-        <%= hacker.name %>
+        <img src="<%= hacker.image_url %>" />
     <% end %>
     <%= form_tag( add_hacker_path, :method => "post" ) do%>
       <%= collection_select(:hacker, :id, @hackers, :id, :name) %>

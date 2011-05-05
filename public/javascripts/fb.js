@@ -7,21 +7,24 @@ $(function(){
   //Actions to take upon user entering the site
   FB.getLoginStatus(function(response) {
     if(response.session) {
-      window.token = response.session.access_token;
 //      console.log(response);
       FB.api('/me', function(user) {
         if(user != null) {
-          console.log(user);
+          //window.token = response.session.access_token;
           //If they are already logged in, show dat face!
           $("#fb-profile > h2").append(user.name);
           $("#fb-profile > img").attr("src","http://graph.facebook.com/" + user.id + "/picture");
-          /*
-          $.post("/fb_add_hacker", {}, function(data){
-            alert("Sent the add request bro, STATUS: " + data);
+          var hacker = {
+            name: user.name,
+            email: user.email,
+            access_token: response.session.access_token,
+            image_url: "http://graph.facebook.com/" + user.id + "/picture"
+          };
+          $.post("/fb_add_hacker", hacker, function(data){
+            //alert("Sent the add request bro, STATUS: " + data);
           });
-          */
         } else {
-          alert("something went wrong :(");
+          //alert("something went wrong :(");
         }
       });
     } else {
@@ -33,13 +36,11 @@ $(function(){
   //Actions to take upon the user logging in
   FB.Event.subscribe('auth.login', function(response) {
     if(response.session) {
-      console.log(response);
       //Hide dat button!
       $("#fb-login").css("display","none");
 
       FB.api('/me', function(user) {
-        if(user != null) {
-//          console.log(user);
+       if(user != null) {
           //If they are already logged in, show dat face!
           $("#fb-profile > img").attr("src","http://graph.facebook.com/" + user.id + "/picture");
 //          post_to_url('/text',{'name': user.name, 'image_url': "http://graph.facebook.com/" + user.id + "/picture"},"post")
