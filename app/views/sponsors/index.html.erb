@@ -3,6 +3,6 @@
 </div>
 <div id="content">
   <% @sponsors.each do |sponsor| %>
-    <%= image_tag(sponsor.logo_url, :height => "100", :class => "sponsor_logo") %>
+    <a href=<%= sponsor_path(sponsor)%>><%= image_tag(sponsor.logo_url, :height => "100", :class => "sponsor_logo") %></a>
   <%end%>
 </div>
