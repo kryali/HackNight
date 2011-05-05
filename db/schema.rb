@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20110505103944) do
     t.string   "email"
     t.integer  "project_id"
     t.string   "access_token"
+    t.string   "fb_id"
   end
 
   create_table "hacknights", :force => true do |t|

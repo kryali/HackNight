@@ -12,5 +12,9 @@ $(function(){
 </script>
 <div id="title-header">
   <h2>The <span class="accent">Hackers</span></h2>
-  <h2> I participated in Hack Night </h2>
+</div>
+<div id="content">
+  <% @hackers.each do |hacker| %>
+    <img src="<%=hacker.image_url %>" />
+  <% end %>
 </div>
