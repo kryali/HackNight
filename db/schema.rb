@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110505042421) do
+ActiveRecord::Schema.define(:version => 20110505071911) do
 
   create_table "badges", :force => true do |t|
     t.datetime "created_at"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20110505042421) do
     t.datetime "updated_at"
     t.string   "email"
     t.integer  "project_id"
+    t.string   "access_token"
   end
 
   create_table "hacknights", :force => true do |t|

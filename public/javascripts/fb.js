@@ -10,9 +10,8 @@ $(function(){
       window.token = response.session.access_token;
       console.log(response);
       FB.api('/me', function(user) {
-
         if(user != null) {
-          console.log(user);
+          //console.log(user);
           //If they are already logged in, show dat face!
           $("#fb-profile > h2").append(user.name);
           $("#fb-profile > img").attr("src","http://graph.facebook.com/" + user.id + "/picture");
