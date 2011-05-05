@@ -6,18 +6,13 @@
   <div id="card">
     <ul id="info">
       <li><span class="accent">Name:</span> <%= @project.name %></li>
-      <% if @project.project_url? %>
-        <span class="accent">URL:</span> <%= @project.project_url %>
-      <% end %>
-      <li><span class="accent">Description: </span><%= @project.description %></li>
-      <li><%= link_to("Edit", edit_project_path(@project.id)) %></li>
+      <span class="accent">Venue:</span> <%= @project.venue%>
+      <li><%= link_to("Edit", edit_hacknight_path(@project.id)) %></li>
     </ul>
-    <img src="<%= @project.image_url %>" />
   </div>
 </div>
 <div id="title-header">
-  <h2>The <span class="accent">Hackers</span></h2>
-
+  <h2><span class="accent">Projects</span></h2>
   <div id="content">
     <% @project.hackers.each do |hacker| %>
         <img src="<%= hacker.image_url %>" />
@@ -30,8 +25,10 @@
   </div>
 </div>
 <div id="title-header">
-  <h2><span class="accent">Achievements</span></h2>
-</div>
-<div id="title-header">
-  <h2><span class="accent">Sponsored</span> By</h2>
+  <h2><span class="accent">Sponsors</span> By</h2>
+  <div id="content">
+    <% @project.sponsors.each do |sponsor| %>
+        <%= sponsor.name %>
+    <% end %>
+  </div>
 </div>

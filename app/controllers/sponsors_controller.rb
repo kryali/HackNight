@@ -37,4 +37,9 @@ class SponsorsController < ApplicationController
     end
   end
 
+  def destroy
+    Sponsor.find(params[:id]).destroy
+    redirect_to :action => 'index'
+  end
+
 end

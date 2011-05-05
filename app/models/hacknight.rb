@@ -1,5 +1,6 @@
 class Hacknight < ActiveRecord::Base
-  validates :venue, :presence => true
+  #Validate the event_id
+  validates :venue, :event_id, :presence => true
 
   has_many :projects
   has_many :sponsors
