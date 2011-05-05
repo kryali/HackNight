@@ -2,6 +2,7 @@
   <h2>The <span class="accent">Sponsors</span></h2>
 </div>
 <div id="content">
+  <%= link_to("Become a Sponsor", new_sponsor_path, :id=>"button") %>
   <% @sponsors.each do |sponsor| %>
     <%= image_tag(sponsor.logo_url, :height => "100", :class => "sponsor_logo") %>
   <%end%>
