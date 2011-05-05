@@ -6,9 +6,11 @@
   <div id="card">
     <ul id="info">
       <li><span class="accent">Name:</span> <%= @project.name %></li>
-      <span class="accent">Venue:</span> <%= @project.venue%>
+      <li><%= link_to("Project URL", @project.project_url) %></li>
+      <span class="accent">Venue:</span> <%= @project.hacknight%>
       <li><%= link_to("Edit", edit_hacknight_path(@project.id)) %></li>
     </ul>
+    <img src="<%= @project.image_url %>" />
   </div>
 </div>
 <div id="title-header">
@@ -27,8 +29,5 @@
 <div id="title-header">
   <h2><span class="accent">Sponsors</span> By</h2>
   <div id="content">
-    <% @project.sponsors.each do |sponsor| %>
-        <%= sponsor.name %>
-    <% end %>
   </div>
 </div>
