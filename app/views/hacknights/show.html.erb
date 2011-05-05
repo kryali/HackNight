@@ -1,0 +1,19 @@
+<div id="title-header">
+  <!--TODO:Change this title-->
+  <h2>a Hacknight</h2>
+</div>
+<div id="content">
+  <div id="card">
+    <ul id="info">
+      <li><span class="accent">Venue:</span> <%= @hacknight.venue%></li>
+      <li><span class="accent">EID:</span> <%= @hacknight.event_id%></li>
+      <li><%= link_to("Edit", edit_hacknight_path(@hacknight.id)) %></li>
+    </ul>
+  </div>
+</div>
+<div id="title-header">
+  <h2><span class="accent">Achievements</span></h2>
+</div>
+<div id="title-header">
+  <h2><span class="accent">Sponsored</span> By</h2>
+</div>

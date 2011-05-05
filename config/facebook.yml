@@ -1,9 +1,7 @@
 development:
   app_id: 105681736187371
   secret_key: 1133dceb7b1ee50066ed4ea18008419b 
-test:
-  app_id: 105681736187371
-  secret_key: 1133dceb7b1ee50066ed4ea18008419b 
+#production needs its own app eventually
 production:
   app_id: 105681736187371
   secret_key: 1133dceb7b1ee50066ed4ea18008419b 
