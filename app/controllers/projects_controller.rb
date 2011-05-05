@@ -40,4 +40,13 @@ class ProjectsController < ApplicationController
       flash[:errors] = @project.errors.full_messages
     end
   end
+
+  def update
+    @project = Project.find(params[:id])
+    if(@project.update_attributes(params[:project]))
+      redirect_to(@project)
+    else
+      redirect_to(edit_project_path(@project))
+    end
+  end
 end
