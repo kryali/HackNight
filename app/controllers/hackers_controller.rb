@@ -41,6 +41,7 @@ class HackersController < ApplicationController
   end
 
   def check_hacknights
-    render :text => session[:user_id]#current_hacker
+    render :text => current_hacker.access_token
+#    render :text => session[:user_id]#current_hacker
   end
 end

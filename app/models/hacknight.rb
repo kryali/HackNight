@@ -4,4 +4,5 @@ class Hacknight < ActiveRecord::Base
 
   has_many :projects
   has_many :sponsors
+  has_many :hackers
 end

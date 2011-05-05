@@ -3,7 +3,7 @@
 </div>
 <div id="content">
   <% if current_hacker %>
-      You're logged in!!
+    <%= link_to("Update Hacknights", update_hacknights_path, :id=>"button") %>
   <% end %>
   <% @hackers.each do |hacker| %>
     <img src="<%=hacker.image_url %>" />
