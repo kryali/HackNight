@@ -30,7 +30,7 @@ class SponsorsController < ApplicationController
 
   def update
     @sponsor = Sponsor.find(params[:id])
-    if(@sponsor.update_attributes(params[:sponsor])
+    if(@sponsor.update_attributes(params[:sponsor]))
       redirect_to(@sponsor)
     else
       redirect_to(edit_sponsor_path(@sponsor))
