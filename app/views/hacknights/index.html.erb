@@ -1,0 +1,15 @@
+<div id="title-header">
+  <h2><span class="accent">Hack Nights<span></h2>
+</div>
+<div id="content">
+  <%= link_to("Add a Hack Night", new_project_path, :id=>"button") %>
+  <ul class="list">
+  <% @hacknights.each do |hacknight| %>
+    <li>
+      <div class="name">
+        <%= link_to(hacknight.name, hacknight) %>
+      </div>
+    </li>
+  <% end %>
+  </ul>
+</div>

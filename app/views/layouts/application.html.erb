@@ -19,7 +19,9 @@
         
         <div id ="fb-profile">
           <h2></h2>
-          <img />
+          <%if(@hacker_pic)%>
+            <%= image_tag(@hacker_pic) %>
+          <%end%>
         </div>
       <% if current_hacker %>
         <div id="fb-profile"><%= current_hacker.name %><img src="<%= current_hacker.image_url %>"/></div>

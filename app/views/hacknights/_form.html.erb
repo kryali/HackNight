@@ -1,0 +1,19 @@
+<% content_for :head do %>
+  <%= javascript_include_tag "jquery.form" %>
+<% end %>
+
+<%= form_for @hacknight, :html => {:id => "submit-form"} do |f| %>
+  <% if flash[:errors] %>
+    <ul id="errors">
+    <% flash[:errors].each do |error|%>
+      <li><%= error.to_s.humanize %><br /></li>
+    <% end %>
+    </ul>
+  <% end %>
+  <%= f.text_field :name, :placeholder => "Hack Night Name" %>
+  <%= f.text_field :venue, :placeholder => "Hack Night Venue" %>
+  <!--Need to validate event_id format-->
+  <%= f.text_field :event_id, :placeholder => "Facebook Event Id" %>
+  <%= submit_tag "Save Hack Night" %>
+<% end %>
+<%= javascript_include_tag "image_upload" %>
