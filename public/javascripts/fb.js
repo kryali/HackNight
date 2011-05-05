@@ -78,7 +78,7 @@ function fb_login(){
             authenticity_token: AUTH_TOKEN
           };
           post_to_url("/fb_add_hacker", hacker, "post");
-          alert("Logged in!");
+          // alert("Logged in!");
         }
       });
     } else {

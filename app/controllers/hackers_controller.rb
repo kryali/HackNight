@@ -23,17 +23,19 @@ class HackersController < ApplicationController
         fb_id: params[:fb_id]
       })
       if @hacker.save
-        current_hacker = @hacker
         session[:user_id] = @hacker.id
-        redirect_to index_path
+        current_hacker = @hacker
         #render :text =>  "Added Hacker: " + @hacker.id.to_s + " Session: " + session[:user_id].to_s
       else
-        #render :text => @hacker.errors.full_messages
+        render :text => @hacker.errors.full_messages
       end
     else
         session[:user_id] = hackers[0].id
+        current_hacker = hackers[0]
         redirect_to index_path
-        #render :text =>  "Already have the hacker"
+        #render :text => session[:user_id].to_s
+        #session[:user_id] = hackers[0].id
+#        render :text =>  "Already have the hacker, Session: " + session[:user_id].to_s
     end
   end
 
