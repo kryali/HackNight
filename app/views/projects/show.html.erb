@@ -1,37 +1,29 @@
 <div id="title-header">
-  <h2>Presenting <span class="accent"><%= @project.name %></span></h2>
+  <h2>Presenting <span class="accent"><%= @hacknight.name %></span></h2>
 </div>
 
 <div id="content">
   <div id="card">
     <ul id="info">
-      <li><span class="accent">Name:</span> <%= @project.name %></li>
-      <% if @project.project_url? %>
-        <span class="accent">URL:</span> <%= @project.project_url %>
-      <% end %>
-      <li><span class="accent">Description: </span><%= @project.description %></li>
-      <li><%= link_to("Edit", edit_project_path(@project.id)) %></li>
+      <li><span class="accent">Name:</span> <%= @hacknight.name %></li>
+      <span class="accent">Venue:</span> <%= @hacknight.venue%>
+      <li><%= link_to("Edit", edit_hacknight_path(@hacknight.id)) %></li>
     </ul>
-    <img src="<%= @project.image_url %>" />
   </div>
 </div>
 <div id="title-header">
-  <h2>The <span class="accent">Hackers</span></h2>
-
+  <h2><span class="accent">Projects</span></h2>
   <div id="content">
-    <% @project.hackers.each do |hacker| %>
-        <%= hacker.name %>
-    <% end %>
-    <%= form_tag( add_hacker_path, :method => "post" ) do%>
-      <%= collection_select(:hacker, :id, @hackers, :id, :name) %>
-      <%= hidden_field(:project, :id) %>
-      <%= submit_tag("Add Hacker", :id=>"button") %>
+    <% @hacknight.projects.each do |project| %>
+        <%= project.name %>
     <% end %>
   </div>
 </div>
 <div id="title-header">
-  <h2><span class="accent">Achievements</span></h2>
-</div>
-<div id="title-header">
-  <h2><span class="accent">Sponsored</span> By</h2>
+  <h2><span class="accent">Sponsors</span> By</h2>
+  <div id="content">
+    <% @hacknight.sponsors.each do |sponsor| %>
+        <%= sponsor.name %>
+    <% end %>
+  </div>
 </div>
