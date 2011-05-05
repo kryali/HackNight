@@ -49,4 +49,9 @@ class ProjectsController < ApplicationController
       redirect_to(edit_project_path(@project))
     end
   end
+
+  def destroy
+    Project.find(params[:id]).destroy
+    redirect_to :action => 'index'
+  end
 end
