@@ -21,9 +21,8 @@
           <h2></h2>
           <img />
         </div>
-      <% if session[:user_id] %>
-        <% @hacker = Hacker.find(session[:user_id]) %>
-        <div id="fb-profile"><%= @hacker.name %><img src="<%= @hacker.image_url %>"/></div>
+      <% if current_hacker %>
+        <div id="fb-profile"><%= current_hacker.name %><img src="<%= current_hacker.image_url %>"/></div>
       <% else %>
         <fb:login-button id="fb-login" perms="email, user_events">Login with Facebook</fb:login-button>
       <% end %>

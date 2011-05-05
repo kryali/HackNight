@@ -9,12 +9,13 @@ class ApplicationController < ActionController::Base
     @current_hacker ||= Hacker.find_by_id(session[:user_id])
   end
 
-  helper_method :current_user, :signed_in?, :redirect_to_home
 
   # Helper method to assign and set user in session
   def current_hacker=(hacker)
       @current_hacker = hacker
       session[:user_id] = hacker.id
   end
+
+  helper_method :current_hacker
 
 end

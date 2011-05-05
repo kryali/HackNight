@@ -1,6 +1,7 @@
 class HackersController < ApplicationController
   def index
     @hackers = Hacker.all
+    current_hacker
   end
 
   def show
