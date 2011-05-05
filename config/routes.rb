@@ -14,7 +14,7 @@ HackNight::Application.routes.draw do
   match 'about' => "index#about"
 
   match 'hackers' => "hackers#index"
-  match 'hackers/update/hacknights' => "hackers#check_hacknights", :as => "update_hacknights"
+  match 'hackers/:id/update/hacknights' => "hackers#check_hacknights", :as => "update_hacknights"
   match 'projects/add_hacker' => "projects#add_hacker", :as => "add_hacker"
   match 'imgur' => "imgur#upload", :as => "imgur_api"
   match 'fb_add_hacker' => "hackers#create"

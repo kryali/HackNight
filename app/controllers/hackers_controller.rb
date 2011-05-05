@@ -41,7 +41,19 @@ class HackersController < ApplicationController
   end
 
   def check_hacknights
-    render :text => current_hacker.access_token
-#    render :text => session[:user_id]#current_hacker
+   @hacker = Hacker.find(params[:id])
+   graph = Koala::Facebook::GraphAPI.new(@hacker.access_token)
+   str = ""
+   Hacknight.all.each do |night|
+     attendees = graph.get_connections(night.event_id, "attending")
+     attendees.each do |attendee|
+       if @hacker.fb_id == attendee['id']
+        night.hackers << @hacker
+        render :text => "You attended Hack Night " + night.event_id
+       end
+     end
+   end
+#    render :text => #    render :text => session[:user_id]#current_hacker
+    return
   end
 end
