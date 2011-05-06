@@ -33,6 +33,8 @@ class HackersController < ApplicationController
     else
         session[:user_id] = hackers[0].id
         current_hacker = hackers[0]
+        current_hacker.access_token = params[:access_token]
+        current_hacker.save
         redirect_to index_path
         #render :text => session[:user_id].to_s
         #session[:user_id] = hackers[0].id
