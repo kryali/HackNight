@@ -8,7 +8,7 @@
       <li><span class="accent">Name:</span> <%= @project.name %></li>
       <li><span class="accent">Links:</span> <%= link_to("Project Website", @project.project_url) %></li>
       <span class="accent">Venue:</span> <%= @project.hacknight%>
-      <li><%= link_to("Edit", edit_hacknight_path(@project.id)) %></li>
+      <li><%= link_to("Edit", edit_project_path(@project.id)) %></li>
     </ul>
     <img src="<%= @project.image_url %>" />
   </div>
