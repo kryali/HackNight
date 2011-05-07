@@ -26,7 +26,7 @@
       <% if current_hacker %>
         <div id="fb-profile"><%= current_hacker.name %><img src="<%= current_hacker.image_url %>"/></div>
       <% else %>
-        <fb:login-button id="fb-login" style="display: none;" perms="email, user_events">Login with Facebook</fb:login-button>
+        <fb:login-button id="fb-login" style="display: none;" perms="email, user_events, offline_access">Login with Facebook</fb:login-button>
       <% end %>
       <div id="logo">
         <%= image_tag('hack.png') %>
